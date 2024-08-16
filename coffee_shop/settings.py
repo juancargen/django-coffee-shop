@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'crispy_tailwind',
     'products',
     'users',
+    'orders',
 ]
 
 MIDDLEWARE = [
@@ -108,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-co'
 
 TIME_ZONE = 'UTC'
 
@@ -136,5 +137,10 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = 'tailwind'
 
 CRISPY_TEMPLATE_PACK = 'tailwind'
 
-# Login (perosnlaizado; para que redirija a la url una vez inicie sesión en login)
+# Login (personalizado; para que redirija a la url una vez inicie sesión en login)
 LOGIN_REDIRECT_URL = 'list_product'
+
+# Logout (personalizado; para que redirija a la url una vez cierre sesión)
+LOGOUT_REDIRECT_URL = 'login'
+
+LOGIN_URL = 'login'  # URL de login

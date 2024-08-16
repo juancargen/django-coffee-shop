@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load tailwind_filters %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
+        <button
+            class="block rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
+            type="submit"
+        >
+            Registrar
+        </button>
+    </div>
+</form>
+{% endblock  %}
